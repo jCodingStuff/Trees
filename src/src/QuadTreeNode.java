@@ -7,10 +7,10 @@ import java.util.List;
  *
  * X is positive to the right, and Y is positive to the top
  * The square or rectangle or whatever has:
- *  x, y: center
- *  w: distance from the center to a horizontal limit
- *  h: distance from the center to a vertical limit
- *  capacity: number of points that can be held
+ *  - x, y: center
+ *  - w: distance from the center to a horizontal limit
+ *  - h: distance from the center to a vertical limit
+ *  - capacity: number of points that can be held
  */
 public class QuadTreeNode {
 
@@ -40,6 +40,23 @@ public class QuadTreeNode {
         this.points = new ArrayList<Point>();
     }
 
+    public List<Point> query(QuadTreeNode range) {
+        List<Point> result = new ArrayList<Point>();
+        if (this.intersects(range)) {
+            if (!this.isDivided()) { // There is no more subdivisions
+                for (Point point : this.points) {
+                    if (range.contains(point)) result.add(point);
+                }
+            }
+            else { // There exist subNodes
+                for (QuadTreeNode node : this.subNodes) { // Query the subNodes and concat to result
+                    concat(result, node.query(range));
+                }
+            }
+        }
+        return result;
+    }
+
     public void insert(Point point) {
         if (this.contains(point)) {
             if (this.isDivided()) { // If it is divided, recursively call insert in the subNodes
@@ -65,7 +82,14 @@ public class QuadTreeNode {
             }
         }
     }
-    
+
+    private boolean intersects(QuadTreeNode node) {
+        return !(this.x + 2 * this.w < node.x ||
+                 node.x + 2 * node.w < this.x ||
+                 this.y + 2 * this.h < node.y ||
+                 node.y + 2 * node.h < this.y);
+    }
+
     private boolean contains(Point point) {
         return point.getX() >= this.x - this.w && point.getX() < this.x + this.w
                 && point.getY() >= this.y - this.h && point.getY() < this.y + this.h;
@@ -90,10 +114,10 @@ public class QuadTreeNode {
 
 
     public boolean isDivided() {
-        return this.subNodes == null;
+        return this.subNodes != null;
     }
 
-    // GETTER AND SETTER AREA!!!
+    // GETTER AND SETTER AREA
     public float getX() {
         return x;
     }
@@ -112,5 +136,11 @@ public class QuadTreeNode {
 
     public int getCapacity() {
         return capacity;
+    }
+
+
+    // STATIC HELPER AREA
+    private static void concat(List<Point> list1, List<Point> list2) {
+        for (Point point : list2) list1.add(point);
     }
 }
