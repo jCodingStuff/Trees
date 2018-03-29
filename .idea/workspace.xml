@@ -35,7 +35,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/src/Point.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -49,6 +49,31 @@
                 <element signature="e#340#341#0" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
                 <element signature="e#399#400#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuadTreeNode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/src/QuadTreeNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+              <folding>
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#548#549#0" expanded="true" />
+                <element signature="e#584#585#0" expanded="true" />
+                <element signature="e#628#629#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#712#713#0" expanded="true" />
+                <element signature="e#739#740#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
+                <element signature="e#790#791#0" expanded="true" />
+                <element signature="e#814#815#0" expanded="true" />
+                <element signature="e#841#842#0" expanded="true" />
+                <element signature="e#865#866#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,6 +111,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/src/Test.java" />
         <option value="$PROJECT_DIR$/src/src/Point.java" />
+        <option value="$PROJECT_DIR$/src/src/QuadTreeNode.java" />
       </list>
     </option>
   </component>
@@ -274,12 +300,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522308300831</updated>
-      <workItem from="1522308302124" duration="324000" />
+      <workItem from="1522308302124" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324000" />
+    <option name="totallyTimeSpent" value="601000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -357,6 +383,29 @@
             <element signature="e#340#341#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#399#400#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/src/QuadTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#548#549#0" expanded="true" />
+            <element signature="e#584#585#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#814#815#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
           </folding>
         </state>
       </provider>
